@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Inter&family=Montserrat:wght@100&family=PT+Sans&family=Pacifico&family=Poppins:wght@100;600&family=Rubik:wght@300&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    background-image: url(./img/blur-radial.svg), url(./img/blur-radial.svg);
+    background-position: top -400px left -300px, bottom -400px right -300px;
+    background-repeat: no-repeat;
+    background-color: #121826;
+}
+
+.box-one, .box-two, .box-three{
+    display: flex;
+    align-items: center;
+    width: 700px;
+    min-height: 500px;
+    border: solid;
+    border-color: grey;
+    border-radius: 16px;
+    flex-direction: column;
+    color: white;
+}
+
+/* DESAPARECER */
+.box-two{
+    display: none;
+}
+
+.box-three{
+    display: none;
+}
+
+/* primer-register */
+
+.first-register-container{
+    display: flex;
+    width: 600px;
+    height: 80%;
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 30px;
+}
+
+label{
+    font-size: 16px;
+    color: #a1a1a9;
+    display: flex;
+    align-items: start;
+}
+
+input {
+    border-radius: 14px;
+    padding: 1.25rem;
+    width: 100%;
+    border: 2px solid gray;
+    background-color: #212936;
+    color: #a1a1a9;  
+}
+
+.btn{
+    background: linear-gradient(#845EEE, #652CD1);
+    margin-top: 2rem;
+    color: #E5E7EB;
+    border-radius: 5rem;
+    border: none;
+    padding: 0.8rem 2.25rem;
+    margin-inline: auto;
+    inset-inline: 0;
+    display: block;
+    cursor: pointer;
+}
+
+/* Borrar un form */
+.delete-form{
+    display: none;
+}
+
+
+/* Aparecer un form */
+.add-form{
+    display: block;
+}
