@@ -21,6 +21,7 @@ body{
 }
 
 .box-one, .box-two, .box-three{
+    background-color: #212936;
     display: flex;
     align-items: center;
     width: 700px;
@@ -41,8 +42,7 @@ body{
     display: none;
 }
 
-/* primer-register */
-
+/* primer register */
 .first-register-container{
     display: flex;
     width: 600px;
@@ -72,6 +72,63 @@ input {
     color: #a1a1a9;  
 }
 
+/* segundo register */
+.second-register-container{
+    display: flex;
+    width: 600px;
+    height: 80%;
+    margin: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.second-register-container .option{
+    color: white;
+    background-color: #394050;
+    font-size: 0.875rem;
+    text-align: left;
+    padding: 1.25rem 0rem 1.25rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid grey;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.second-register-container .option:hover{
+    background-color: #845EEE;
+}
+
+.second-register-container .option:focus{
+    background-color: #652cd1; 
+    color: white; 
+    outline: none;
+}
+
+/* tercer register */
+.third-register-container{
+    display: flex;
+    width: 600px;
+    height: 80%;
+    margin: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.btn-submit{
+    background: linear-gradient(#845EEE, #652CD1);
+    margin-top: 2rem;
+    color: #E5E7EB;
+    border-radius: 5rem;
+    border: none;
+    padding: 0.8rem 2.25rem;
+    margin-inline: auto;
+    inset-inline: 0;
+    display: block;
+    cursor: pointer;
+}
+
+/* Botones */
 .btn{
     background: linear-gradient(#845EEE, #652CD1);
     margin-top: 2rem;
