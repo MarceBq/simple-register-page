@@ -19,11 +19,15 @@ let emailValue = ' '
 const BTN_FIRST = document.querySelector('#btn-first')
 const BTN_SECOND = document.querySelector('#btn-second')
 
+// ------ Segundo Step ----- //
+const BOTTONS_SELECTED = document.querySelectorAll('.option')
+
+
 //funciones para cambiar primer boton 
 BTN_FIRST.addEventListener('click', (e)=>{
     
     // Evito los cambios bruscos del formulario
-    e.preventDefault();
+    e.preventDefault()
 
     // Validar el primer paso del formulario
     if (BOX_ONE.checkValidity()) {
@@ -37,15 +41,29 @@ BTN_FIRST.addEventListener('click', (e)=>{
 
         console.log('Nombre:', nameValue);
         console.log('Email:', emailValue);
+
     } else {
         alert("Algunos campos no son válidos. Por favor, revisa el formulario.");
     }
 
 });
 
+// Funcion tomar los valores del boton
+BOTTONS_SELECTED.forEach(botton=>{
+    botton.addEventListener('click', ()=>{
+        let BOTTON_VALUE = botton.textContent
 
-//funcion para cambiar segundo boton
-BTN_SECOND.addEventListener('click', ()=>{
+        console.log(`Valor: `, BOTTON_VALUE)
+    }) 
+})
+
+
+// Funcion para cambiar segundo boton
+BTN_SECOND.addEventListener('click', (e)=>{
+
+    e.preventDefault()
+
     BOX_TWO.classList.toggle('add-form')
     BOX_THREE.classList.toggle('add-form')
+     
 })
