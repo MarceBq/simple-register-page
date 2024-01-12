@@ -22,6 +22,13 @@ const BTN_SECOND = document.querySelector('#btn-second')
 // ------ Segundo Step ----- //
 const BOTTONS_SELECTED = document.querySelectorAll('.option')
 
+// ------ Tercer Step ----- //
+const THREE_CONTAINER = document.querySelector('.third-register-container')
+
+//Crear elementos
+const NAME_ELEMENT = document.createElement('p')
+const EMAIL_ELEMENT = document.createElement('p')
+const BUTTON_ELEMENT = document.createElement('p')
 
 //funciones para cambiar primer boton 
 BTN_FIRST.addEventListener('click', (e)=>{
@@ -48,14 +55,20 @@ BTN_FIRST.addEventListener('click', (e)=>{
 
 });
 
+
+let bottonValue = ' '
+
 // Funcion tomar los valores del boton
 BOTTONS_SELECTED.forEach(botton=>{
     botton.addEventListener('click', ()=>{
-        let BOTTON_VALUE = botton.textContent
+        bottonValue = botton.textContent
+        
 
-        console.log(`Valor: `, BOTTON_VALUE)
-    }) 
+        console.log(`Valor: `, bottonValue)
+    })
+
 })
+
 
 
 // Funcion para cambiar segundo boton
@@ -63,7 +76,19 @@ BTN_SECOND.addEventListener('click', (e)=>{
 
     e.preventDefault()
 
+    NAME_ELEMENT.innerHTML = `Nombre: ${nameValue}`
+    EMAIL_ELEMENT.innerHTML = `Email: ${emailValue} `
+    BUTTON_ELEMENT.innerHTML = `Topics: ${bottonValue}`
+    
+    THREE_CONTAINER.appendChild(NAME_ELEMENT)
+    THREE_CONTAINER.appendChild(EMAIL_ELEMENT)  
+    THREE_CONTAINER.appendChild(BUTTON_ELEMENT)
+
     BOX_TWO.classList.toggle('add-form')
     BOX_THREE.classList.toggle('add-form')
-     
+   
 })
+
+
+
+
