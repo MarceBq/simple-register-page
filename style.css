@@ -153,4 +153,22 @@ input {
     display: block;
 }
 
- 
+.dates{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.dates p, ul{
+    color: #888B94;
+}
+
+li{
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.white-text{
+    color: white;
+}

@@ -22,6 +22,18 @@ const BTN_SECOND = document.querySelector('#btn-second')
 // ------ Segundo Step ----- //
 const BOTTONS_SELECTED = document.querySelectorAll('.option')
 
+// ------ Tercer Step ----- //
+const THREE_CONTAINER = document.querySelector('.third-register-container')
+
+//Crear elementos
+const NAME_ELEMENT = document.createElement('p')
+const EMAIL_ELEMENT = document.createElement('p')
+const LIST_ELEMENT = document.createElement('ul')
+
+//Tomar valor dates container
+const DATE_CONTAINER = document.querySelector('.dates')
+
+
 
 //funciones para cambiar primer boton 
 BTN_FIRST.addEventListener('click', (e)=>{
@@ -48,13 +60,17 @@ BTN_FIRST.addEventListener('click', (e)=>{
 
 });
 
+
+let bottonValue = ' '
+
 // Funcion tomar los valores del boton
 BOTTONS_SELECTED.forEach(botton=>{
     botton.addEventListener('click', ()=>{
-        let BOTTON_VALUE = botton.textContent
+        bottonValue = botton.textContent
+        
+        console.log(`Valor: `, bottonValue)
+    })
 
-        console.log(`Valor: `, BOTTON_VALUE)
-    }) 
 })
 
 
@@ -63,7 +79,19 @@ BTN_SECOND.addEventListener('click', (e)=>{
 
     e.preventDefault()
 
+    NAME_ELEMENT.innerHTML = `Nombre:  <span class="white-text">${nameValue}</span>`
+    EMAIL_ELEMENT.innerHTML = `Email: <span class="white-text">${emailValue}</span>`
+    LIST_ELEMENT.innerHTML = `Topics: <li class="white-text">${bottonValue}</li>`
+    
+    DATE_CONTAINER.appendChild(NAME_ELEMENT)
+    DATE_CONTAINER.appendChild(EMAIL_ELEMENT)  
+    DATE_CONTAINER.appendChild(LIST_ELEMENT)
+
     BOX_TWO.classList.toggle('add-form')
     BOX_THREE.classList.toggle('add-form')
-     
+   
 })
+
+
+
+
