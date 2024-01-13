@@ -31,6 +31,10 @@ const BOTTONS_SELECTED = document.querySelectorAll('.option')
 // ------ Tercer Step ----- //
 const THREE_CONTAINER = document.querySelector('.third-register-container')
 
+
+// ----- Probando envio de gmail ----- //
+const BUTTON_SUBMIT = document.querySelector('.btn-submit');
+
 //Crear elementos
 const NAME_ELEMENT = document.createElement('p')
 const EMAIL_ELEMENT = document.createElement('p')
@@ -109,9 +113,11 @@ BTN_SECOND.addEventListener('click', (e)=>{
 })
 
 
+/*
+BUTTON_SUBMIT.addEventListener('click', () => {
 
-
-
-
-
-
+    //Intentando mandar un gmail con los valores del fomulario 
+    BOX_THREE.setAttribute('action', `https://formsubmit.co/${emailValue}`);
+    BOX_THREE.setAttribute('method', 'POST');
+});
+*/
