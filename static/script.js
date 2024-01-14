@@ -113,4 +113,6 @@ submitButton.addEventListener('click', async e => {
 			html: `<p>Hi ${name}, thanks for your participation in our survey</p>`,
 		}),
 	})
+
+	alert("Thanks you!!. You'll be receiving an email soon")
 })
