@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Regiter Page</title>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+	</head>
+	<body>
+		<form class="box-one">
+			<div class="first-register-container">
+				<h1>Register</h1>
+
+				<label for="name">Name</label>
+				<input
+					id="name"
+					name="name"
+					type="text"
+					placeholder="enter your name"
+					required
+				/>
+
+				<label for="email">Email</label>
+				<input
+					id="email"
+					name="email"
+					type="email"
+					placeholder="example@gmail.com"
+					required
+				/>
+
+				<button id="btn-first" class="btn">Continue</button>
+			</div>
+		</form>
+
+		<form class="box-two">
+			<div class="second-register-container">
+				<h1>Which topics you are interested in?</h1>
+
+				<button class="option" type="button">Software Development</button>
+				<button class="option" type="button">User Experience</button>
+				<button class="option" type="button">Graphic Desing</button>
+
+				<button id="btn-second" class="btn">Continue</button>
+			</div>
+		</form>
+
+		<form class="box-three">
+			<div class="third-register-container">
+				<h1>Summary</h1>
+
+				<div class="dates"></div>
+
+				<button class="btn-submit">Submit</button>
+			</div>
+		</form>
+
+		<script type="module" src="script.js" defer></script>
+	</body>
+</html>
