@@ -5,18 +5,17 @@
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
-		"dev": "nodemon index.js"
+		"dev": "nodemon --exec node --env-file=.env index.js"
 	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/mailgun-js": "^0.22.18",
 		"@types/node": "^20.11.0",
 		"nodemon": "^3.0.2",
 		"prettier": "^3.2.1"
 	},
 	"dependencies": {
-		"mailgun-js": "^0.22.0",
-		"node-static": "^0.7.11"
+		"node-static": "^0.7.11",
+		"nodemailer": "^6.9.8"
 	}
 }
